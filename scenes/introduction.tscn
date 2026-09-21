@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cnx242cytsfv1"]
+
+[ext_resource type="Script" uid="uid://d1h53ik3b727r" path="res://scripts/introduction.gd" id="1_fiwxd"]
+[ext_resource type="Texture2D" uid="uid://c6l4p7dplav43" path="res://assets/page1.png" id="2_xofpe"]
+[ext_resource type="Texture2D" uid="uid://bv3egfdryrfh5" path="res://assets/page2.png" id="3_e7oap"]
+[ext_resource type="Texture2D" uid="uid://n6fundr3raws" path="res://assets/page3.png" id="4_k15ss"]
+[ext_resource type="Texture2D" uid="uid://cccyg7srijlcv" path="res://assets/page4.png" id="5_e1131"]
+[ext_resource type="Texture2D" uid="uid://6fmgt31tjino" path="res://assets/space.png" id="6_e7oap"]
+
+[node name="Introduction" type="Control" unique_id=1988494700 node_paths=PackedStringArray("texture_rect")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fiwxd")
+comics = Array[Texture2D]([ExtResource("2_xofpe"), ExtResource("3_e7oap"), ExtResource("4_k15ss"), ExtResource("5_e1131")])
+texture_rect = NodePath("TextureComics")
+
+[node name="TextureComics" type="TextureRect" parent="." unique_id=908098627]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xofpe")
+stretch_mode = 5
+
+[node name="TextureNextComicStrip" type="TextureRect" parent="." unique_id=1689623131]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.87500006
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_e7oap")

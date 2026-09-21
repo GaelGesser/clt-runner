@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bekeqw3uqp23k"
+path="res://.godot/imported/Newer Wave.mp3-06c7daefd1c8bce93f482fd72754441b.mp3str"
+
+[deps]
+
+source_file="res://sounds/Newer Wave.mp3"
+dest_files=["res://.godot/imported/Newer Wave.mp3-06c7daefd1c8bce93f482fd72754441b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

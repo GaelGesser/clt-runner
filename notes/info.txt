@@ -1,0 +1,31 @@
+link do jogo - https://jackmalta.itch.io/runner-clt
+
+CLT Runner:
+
+Quais são os elementos?
+- temos o player
+- as comidas
+- o clt
+- mapa de fundo
+- as imagens da introdução
+
+
+Quais são as regras para o jogador?
+- ele só pode se mover de um lado da estrada para o outro
+- se ele bater em um clt ele reinicia o jogo
+
+Quantas telas tem o jogo?
+2 telas , a tela de introducao e a tela de game
+
+Como é o fluxo do jogo?
+-> tela de introdução -> tela de gameplay -> tela de gameplay...
+
+Qual o objetivo do jogo?
+- objetivo do jogo pelo que notei é ver o quão longe você vai
+
+Sugestões:
+- implementar um sistema de pontuação
+- fazer um menu para o jogo
+- acho que incrementar velocidade ao longo do tempo
+- pensar em alguns upgrades exemplo ficar invulneravel por um tempo, magnet para sugar as comidas
+- tela de gameover
