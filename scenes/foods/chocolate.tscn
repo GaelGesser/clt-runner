@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://1s6q4lef4lcp"]
+
+[ext_resource type="PackedScene" uid="uid://brvy7acolivwi" path="res://scenes/foods/food.tscn" id="1_cnd2l"]
+[ext_resource type="Script" uid="uid://xktpgpxhpw2h" path="res://scripts/chocolate.gd" id="2_wwrab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwrab"]
+size = Vector2(32, 22)
+
+[node name="Chocolate" unique_id=1627187983 instance=ExtResource("1_cnd2l")]
+script = ExtResource("2_wwrab")
+speed = 100.0
+
+[node name="Collision" parent="." index="2" unique_id=1764438775]
+position = Vector2(-1, -3)
+shape = SubResource("RectangleShape2D_wwrab")

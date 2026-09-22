@@ -25,3 +25,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		sprite.flip_h = false
 		collision.position = marker_collision_left.position
 		position = marker_left.global_position
+
+
+func _on_area_entered(area: Area2D) -> void:
+	area.queue_free()

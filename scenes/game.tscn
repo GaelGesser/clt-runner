@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://pqc31l1hho44" path="res://assets/background.png" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://bh8op1frycxk6" path="res://scenes/game.gd" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://b1hx1flpn164q" path="res://scenes/character/player.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://c1q8qjeri7sw" path="res://scenes/spawner.tscn" id="4_lbhrr"]
+[ext_resource type="AudioStream" uid="uid://bekeqw3uqp23k" path="res://sounds/Newer Wave.mp3" id="5_iywne"]
 
 [node name="Game" type="Node2D" unique_id=2086546494]
 script = ExtResource("1_yqjtg")
@@ -28,3 +30,18 @@ position = Vector2(57, 485)
 
 [node name="MarkerRight" type="Marker2D" parent="LayerPlayer" unique_id=589349335]
 position = Vector2(303, 485)
+
+[node name="SpawnerLayer" type="Node2D" parent="." unique_id=1458811476]
+
+[node name="Spawner" parent="SpawnerLayer" unique_id=1173574584 node_paths=PackedStringArray("marker_spawn_left", "marker_spawn_right") instance=ExtResource("4_lbhrr")]
+marker_spawn_left = NodePath("../MarkerSpawnLeft")
+marker_spawn_right = NodePath("../MarkerSpawnRight")
+
+[node name="MarkerSpawnRight" type="Marker2D" parent="SpawnerLayer" unique_id=90671439]
+position = Vector2(302, -226)
+
+[node name="MarkerSpawnLeft" type="Marker2D" parent="SpawnerLayer" unique_id=1443720589]
+position = Vector2(59, -226)
+
+[node name="AudioBackground" type="AudioStreamPlayer2D" parent="." unique_id=713835319]
+stream = ExtResource("5_iywne")

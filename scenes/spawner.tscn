@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c1q8qjeri7sw"]
+
+[ext_resource type="Script" uid="uid://cmn5ys6iyt0mu" path="res://scripts/spawner.gd" id="1_2vbf6"]
+[ext_resource type="Script" uid="uid://cg6aj0piggaup" path="res://scripts/resources/spawn_item.gd" id="2_6bbd6"]
+[ext_resource type="PackedScene" uid="uid://1s6q4lef4lcp" path="res://scenes/foods/chocolate.tscn" id="3_cmhla"]
+[ext_resource type="PackedScene" uid="uid://dwtq051pwfp4" path="res://scenes/foods/drumstick.tscn" id="4_4wbs5"]
+[ext_resource type="PackedScene" uid="uid://cyx1elt0a8rt4" path="res://scenes/enemy.tscn" id="5_cmhla"]
+
+[sub_resource type="Resource" id="Resource_iywne"]
+script = ExtResource("2_6bbd6")
+scene = ExtResource("3_cmhla")
+metadata/_custom_type_script = "uid://cg6aj0piggaup"
+
+[sub_resource type="Resource" id="Resource_p57ef"]
+script = ExtResource("2_6bbd6")
+scene = ExtResource("4_4wbs5")
+metadata/_custom_type_script = "uid://cg6aj0piggaup"
+
+[node name="Spawner" type="Node2D" unique_id=1173574584]
+script = ExtResource("1_2vbf6")
+items = Array[ExtResource("2_6bbd6")]([SubResource("Resource_iywne"), SubResource("Resource_p57ef")])
+enemy = ExtResource("5_cmhla")
+
+[node name="TimerSpawn" type="Timer" parent="." unique_id=309748992]
+wait_time = 7.0
+one_shot = true
+
+[connection signal="timeout" from="TimerSpawn" to="." method="_on_timer_spawn_timeout"]

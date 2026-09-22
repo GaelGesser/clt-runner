@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dwtq051pwfp4"]
+
+[ext_resource type="PackedScene" uid="uid://brvy7acolivwi" path="res://scenes/foods/food.tscn" id="1_qxht5"]
+[ext_resource type="Texture2D" uid="uid://btutxw3vinrfb" path="res://assets/foods/drumstick.png" id="2_wic5e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wic5e"]
+radius = 11.0
+
+[node name="Drumstick" unique_id=1627187983 instance=ExtResource("1_qxht5")]
+
+[node name="Sprite" parent="." index="0" unique_id=489973929]
+texture = ExtResource("2_wic5e")
+
+[node name="Collision" parent="." index="2" unique_id=1764438775]
+position = Vector2(-3, -1)
+shape = SubResource("CircleShape2D_wic5e")
